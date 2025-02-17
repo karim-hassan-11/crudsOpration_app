@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+ 
+<html>
+    <head>
+        <meta charset="utf-8">
+         <title> CRUD OPRATION</title>
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="crud">
+                    
+            <div class="head">
+                <h2>crud app</h2>
+                <p>PRODUCT MANGEMENT SYSTEM</p>
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="title" id="title">
+                <div class="price">
+                    <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                    <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                    <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                    <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                    <small id="total"> TOTAL :  </small>
+                </div>
+                <input type="number" placeholder="count" id="count">
+                <input type="text" placeholder="category" id="category">
+                <button id="submit">creat</button>
+            </div>
+
+            <div class="output">
+                <div class="SearchBlock">
+                    <input onkeyup="searchData(this.value)" type="text" placeholder="Search" id="Search">
+                    <div class="btnSearch">
+                        <button id="SearchTitle" onclick="getSearch(this.id)">Search by title</button>
+                        <button id="SearchCategory" onclick="getSearch(this.id)">Search by category</button>
+                    </div>
+                </div>
+                <div id="deleteAll">
+
+                    
+                </div>
+                <table>
+                        <thead>
+                           <tr>
+                            <td>id</td>
+                            <td>title</td>
+                            <td>price</td>
+                            <td>taxes</td>
+                            <td>ads</td>
+                            <td>discount</td>
+                            <td>TOTAL</td>
+                            <td>category</td>
+                            <td>update</td>
+                            <td>delete</td>
+                          </tr>
+                        </thead>
+
+                        <tbody id="tbody">
+                       
+         
+                        </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+        
+        <script src="main.js" async defer></script>
+    </body>
+</html>
